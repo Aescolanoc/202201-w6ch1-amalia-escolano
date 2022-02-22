@@ -22,8 +22,8 @@ export function Task({ task }) {
   return (
     <li>
       <input type="checkbox" checked={task.isCompleted} onChange={handleChange} />
-      <span className={task.isCompleted ? "task-completed" : ""}>{task.name}</span> -<span>{task.responsible}</span>
-      <div role="button" tabIndex={0} onClick={handleClick} onKeyPress={handleClick}>
+      <span>{task.name}</span> -<span>{task.responsible}</span>
+      <div role="button" onClick={handleClick} onKeyPress={handleClick}>
         🗑️
       </div>
     </li>
