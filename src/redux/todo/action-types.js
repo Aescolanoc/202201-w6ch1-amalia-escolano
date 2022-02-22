@@ -1,6 +1,6 @@
 export const actionTypes = {
-  load: "@task/loadTask",
-  add: "@task/addTask",
-  remove: "@task/removeTask",
-  update: "@task/updateTask",
+  loadTasks: "@tasks/load",
+  createTask: "@tasks/create",
+  removeTask: "@tasks/remove",
+  updateTask: "@tasks/update",
 };

@@ -1,6 +1,12 @@
-// import { composeWithDevTools } from "@reduxjs/toolkit/dist/devtoolsExtension";
-import { createStore } from "redux";
-import { taskReducer } from "./todo/todo-reducer";
+import { createStore, combineReducers, compose, applyMiddleware } from "redux";
+import { tasksReducer } from "./todo/task-reducer";
+import thunk from "redux-thunk";
 
-// export const store = createStore(taskReducer, composeWithDevTools);
-export const store = createStore(taskReducer, window.REDUX_DEVTOOLS_EXTENSION && window.REDUX_DEVTOOLS_EXTENSION());
+const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+export const store = createStore(
+  combineReducers({
+    tasks: tasksReducer,
+  }),
+  composeEnhancer(applyMiddleware(thunk))
+);
