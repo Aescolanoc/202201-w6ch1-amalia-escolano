@@ -1,16 +1,10 @@
 {
   "tasks": [
     {
-      "id": 163092610,
+      "id": 586743488,
       "name": "planchar la ropa",
-      "responsible": "Maria",
-      "isCompleted": false
-    },
-    {
-      "id": 156611327,
-      "name": "sdfsdfsdf",
       "responsible": "Pedro",
-      "isCompleted": false
+      "isCompleted": true
     }
   ]
 }
