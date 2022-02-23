@@ -5,7 +5,17 @@ import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
 import { taskReducer } from "../redux/todo/task-reducer";
 
-function render(ui, { preloadedState, store = configureStore({ reducer: taskReducer, preloadedState }), ...renderOptions } = {}) {
+function render(
+  ui,
+  {
+    preloadedState,
+    store = configureStore({
+      reducer: { taskReducer },
+      preloadedState,
+    }),
+    ...renderOptions
+  } = {}
+) {
   function Wrapper({ children }) {
     return <Provider store={store}>{children}</Provider>;
   }
